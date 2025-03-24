@@ -64,11 +64,11 @@ main {
     font-size: 32px; 
     font-weight: bold; 
     text-align: center; 
-    color: #333; 
+    color: #dee0df; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
     
-    background: linear-gradient(to right, #40a2f3, #1479c9); /* Dégradé pour un effet dynamique */
+    background-color: #40a2f3;
     /*-webkit-background-clip: text; /* Applique le dégradé uniquement sur le texte */
     /*-webkit-text-fill-color: transparent; /* Rend le texte transparent pour afficher le dégradé */
 
@@ -94,10 +94,21 @@ main {
     align-items: center; /* Centre verticalement le contenu */
     justify-content: flex-start; /* Aligne les éléments vers la gauche */
     gap: 10px; /* Ajoute un petit espace entre le rond et le texte */
+    margin: 20px;
 }
 
 .boite:hover {
     background-color: #939594;
+}
+
+.boite p{
+    height: 100%;
+    width: 70%;
+    display: flex; 
+    align-items: flex-start; /* Aligne le texte en haut */
+    justify-content: center; /* Centre horizontalement (facultatif) */
+    padding: 10px;
+    color: #222222;
 }
 
 .rond {
