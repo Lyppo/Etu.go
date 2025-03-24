@@ -9,13 +9,15 @@ body {
 }
 
 main {
+    width: 100vw;
     height: calc(100% - 40px);
     padding: 20px;
     background-color: #fff;
 }
 
-@media (min-aspect-ratio: 1/1) {
+@media (hover: hover) and (pointer: fine) {
     main {
+        width: auto;
         height: 90%;
         aspect-ratio: 9 / 16;
         border-radius: 25px;
