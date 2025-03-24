@@ -12,7 +12,7 @@ main {
     width: 100vw;
     height: calc(100% - 40px);
     padding: 20px;
-    background-color: #fff;
+    background-color: #dee0df;
 }
 
 #camera {
@@ -62,22 +62,37 @@ main {
 /*-------------------------------------------------------------*/
 
 .boite {
-    width: 200px;  /* Largeur de la div */
-    height: 100px; /* Hauteur de la div */
-    background-color: lightblue; /* Couleur de fond */
+    max-width: 100%; 
+    height: 100px;
+    background-color: #dee0df;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 
-    border-radius: 15px; /* Arrondi des bords (plus la valeur est grande, plus les coins sont arrondis) */
+    display: flex; /* Active flexbox */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: flex-start; /* Aligne les éléments vers la gauche */
+    gap: 10px; /* Ajoute un petit espace entre le rond et le texte */
+}
 
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
-    /* Ombre portée :
-       - 5px : décalage horizontal (ombre vers la droite)
-       - 5px : décalage vertical (ombre vers le bas)
-       - 10px : flou de l'ombre
-       - rgba(0, 0, 0, 0.3) : couleur de l'ombre (noir avec 30% d'opacité) */
+.boite:hover {
+    background-color: #939594;
+}
 
-    display: flex; /* Utilisation de flexbox pour centrer le texte */
-    align-items: center; /* Centrage vertical du contenu */
-    justify-content: center; /* Centrage horizontal du contenu */
+.rond {
+    background-color: #40a2f3;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
-    font-size: 18px; /* Taille du texte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texte {
+    font-size: 200%;
+    color: white;
+    font-weight: bold;
 }
