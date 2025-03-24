@@ -82,7 +82,7 @@ main {
 }
 
 
-.boite-programme, .boite-cours, .bulle {
+.boite-cours, .bulle {
     height: 100px;
     background-color: #dee0df;
     padding: 2%;
@@ -92,29 +92,24 @@ main {
     align-items: center; /* Centre verticalement le contenu */
     justify-content: flex-start; /* Aligne les éléments vers la gauche */
     margin: 20px;
+    cursor: pointer; /* Le curseur devient une main */
+    transition: background-color 0.3s ease; /* Animation douce pour le changement de couleur */
 }
 
-.boite-programme:hover, .boite-cours:hover, .bulle:hover{
-    background-color: #838383;
-}
-
-.boite-programme {
-    max-width: 100%;
-}
-
-.boite-programme p {
-    height: 100%;
-    width: 70%;
-    display: flex; 
-    align-items: flex-start; /* Aligne le texte en haut */
-    justify-content: center; /* Centre horizontalement (facultatif) */
-    padding: 10px;
-    color: #222222;
+/* Applique l'effet de grisage sur toute la div (pas seulement le texte) */
+.boite-cours:hover, .bulle:hover {
+    background-color: #838383; /* Grisage au survol */
 }
 
 .grid {
     display: grid; /* Active le grid */
     grid-template-columns: 2fr 1fr; /* Première colonne plus large, deuxième colonne plus petite */
+    gap: 10px; /* Espacement entre les colonnes */
+}
+
+.grid-prog {
+    display: grid; /* Active le grid */
+    grid-template-columns: 1fr 4fr; /* Première colonne plus large, deuxième colonne plus petite */
     gap: 10px; /* Espacement entre les colonnes */
 }
 
@@ -127,6 +122,10 @@ main {
 
 .grid .boite-cours {
     grid-column: 1; /* Positionne "Mes cours" dans la première colonne */
+}
+
+.bulle .grid .rond {
+    grid-column: 1;
 }
 
 .rond {
@@ -142,14 +141,20 @@ main {
     justify-content: center;
 }
 
-/*rond vert*/
+/* rond vert dans la grille */
 .grid .rond {
-    background-color: #59e2ca;
+    background-color: #59e2ca; /* Couleur initiale du rond vert */
     grid-column: 2; /* Positionne le rond dans la deuxième colonne */
     align-items: center; /* Centre le contenu verticalement dans la cellule */
     justify-content: center; /* Centre horizontalement */
     margin: auto;
     margin-right: 30%;
+    transition: background-color 0.3s ease; /* Ajout d'une transition pour un effet doux */
+}
+
+/* Lorsque le rond vert est survolé, il devient plus foncé */
+.grid .rond:hover {
+    background-color: #3d9d84; /* Couleur plus foncée du rond au survol */
 }
 
 .texte {
@@ -157,5 +162,17 @@ main {
     color: white;
     font-weight: bold;
 }
+
+/* Style spécifique pour les liens */
+.link {
+    display: block; /* Permet à l'élément <a> de couvrir toute la div */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    color: inherit; /* Assure que la couleur du texte reste la même */
+    width: 100%; /* S'assure que le lien couvre toute la taille de la div */
+    height: 100%; /* Permet au lien de couvrir toute la hauteur de la div */
+}
+
+
+
 
 
