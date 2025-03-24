@@ -58,3 +58,26 @@ main {
         background-color: #000;
     }
 }
+
+/*-------------------------------------------------------------*/
+
+.boite {
+    width: 200px;  /* Largeur de la div */
+    height: 100px; /* Hauteur de la div */
+    background-color: lightblue; /* Couleur de fond */
+
+    border-radius: 15px; /* Arrondi des bords (plus la valeur est grande, plus les coins sont arrondis) */
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+    /* Ombre portée :
+       - 5px : décalage horizontal (ombre vers la droite)
+       - 5px : décalage vertical (ombre vers le bas)
+       - 10px : flou de l'ombre
+       - rgba(0, 0, 0, 0.3) : couleur de l'ombre (noir avec 30% d'opacité) */
+
+    display: flex; /* Utilisation de flexbox pour centrer le texte */
+    align-items: center; /* Centrage vertical du contenu */
+    justify-content: center; /* Centrage horizontal du contenu */
+
+    font-size: 18px; /* Taille du texte */
+}
