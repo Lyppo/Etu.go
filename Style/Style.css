@@ -30,6 +30,7 @@ main {
         border-radius: 25px;
         box-shadow: #fff 0px 0px 10px;
         border: 3px solid #000;
+        overflow: hidden;
     }
 
     #camera {
@@ -78,30 +79,26 @@ main {
     width: 100%;
     padding: 25px 0px;
     margin: 0;
-    border-radius: 20px 20px 0 0;
 }
 
 
-.boite {
-    max-width: 100%; 
+.boite-programme, .boite-cours {
     height: 100px;
     background-color: #dee0df;
     padding: 2%;
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-
     display: flex; /* Active flexbox */
     align-items: center; /* Centre verticalement le contenu */
     justify-content: flex-start; /* Aligne les éléments vers la gauche */
-    gap: 10px; /* Ajoute un petit espace entre le rond et le texte */
     margin: 20px;
 }
 
-.boite:hover {
-    background-color: #939594;
+.boite-programme {
+    max-width: 100%;
 }
 
-.boite p{
+.boite-programme p {
     height: 100%;
     width: 70%;
     display: flex; 
@@ -111,7 +108,27 @@ main {
     color: #222222;
 }
 
+.grid {
+    display: grid; /* Active le grid */
+    grid-template-columns: 2fr 1fr; /* Première colonne plus large, deuxième colonne plus petite */
+    gap: 10px; /* Espacement entre les colonnes */
+}
+
+.grid .boite-cours {
+    grid-column: 1; /* Positionne "Mes cours" dans la première colonne */
+}
+
+.grid .rond {
+    background-color: #59e2ca;
+    grid-column: 2; /* Positionne le rond dans la deuxième colonne */
+    align-items: center; /* Centre le contenu verticalement dans la cellule */
+    justify-content: center; /* Centre horizontalement */
+    margin: auto;
+    margin-right: 30%;
+}
+
 .rond {
+    margin: 0px;
     background-color: #40a2f3;
     height: 100px;
     width: 100px;
@@ -128,3 +145,5 @@ main {
     color: white;
     font-weight: bold;
 }
+
+
