@@ -82,7 +82,7 @@ main {
 }
 
 
-.boite-programme, .boite-cours {
+.boite-programme, .boite-cours, .bulle {
     height: 100px;
     background-color: #dee0df;
     padding: 2%;
@@ -92,6 +92,10 @@ main {
     align-items: center; /* Centre verticalement le contenu */
     justify-content: flex-start; /* Aligne les éléments vers la gauche */
     margin: 20px;
+}
+
+.boite-programme:hover, .boite-cours:hover, .bulle:hover{
+    background-color: #838383;
 }
 
 .boite-programme {
@@ -114,17 +118,15 @@ main {
     gap: 10px; /* Espacement entre les colonnes */
 }
 
-.grid .boite-cours {
-    grid-column: 1; /* Positionne "Mes cours" dans la première colonne */
+.grid4 {
+    display: grid; /* Active le grid */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    gap: 10px; /* Espacement entre les colonnes */
 }
 
-.grid .rond {
-    background-color: #59e2ca;
-    grid-column: 2; /* Positionne le rond dans la deuxième colonne */
-    align-items: center; /* Centre le contenu verticalement dans la cellule */
-    justify-content: center; /* Centre horizontalement */
-    margin: auto;
-    margin-right: 30%;
+.grid .boite-cours {
+    grid-column: 1; /* Positionne "Mes cours" dans la première colonne */
 }
 
 .rond {
@@ -138,6 +140,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*rond vert*/
+.grid .rond {
+    background-color: #59e2ca;
+    grid-column: 2; /* Positionne le rond dans la deuxième colonne */
+    align-items: center; /* Centre le contenu verticalement dans la cellule */
+    justify-content: center; /* Centre horizontalement */
+    margin: auto;
+    margin-right: 30%;
 }
 
 .texte {
