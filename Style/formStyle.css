@@ -66,7 +66,7 @@ main {
 }
 
 #select {
-	background: linear-gradient(#F5F5F5,white);
+	background: linear-gradient(#dee0df,#F5F5F5);
 }
 
 .boutons {
@@ -74,7 +74,7 @@ main {
 	display:grid;
 	grid-template-rows: 50% 50%;
 	grid-template-columns:100%;
-	background: linear-gradient(#F5F5F5,white);
+	background: linear-gradient(#dee0df,#F5F5F5);
 	
 }
 
@@ -107,10 +107,17 @@ main {
 
 /*-------------------------------------------------------------*/
 
-.titre-app {
+header {
+	display: grid;
+	grid-template-columns:20% 80%;
+	
+}	
+
+header h1{
+	
     font-size: 32px; 
     font-weight: bold; 
-    text-align: center; 
+    text-align: left;
     color: #dee0df; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
@@ -119,12 +126,24 @@ main {
     /*-webkit-background-clip: text; /* Applique le dégradé uniquement sur le texte */
     /*-webkit-text-fill-color: transparent; /* Rend le texte transparent pour afficher le dégradé */
 
-    padding: 10px; /* Espacement autour du texte */
+    
     border-bottom: 3px solid #40a2f3; /* Ligne en dessous pour un effet stylisé */
-    display: inline-block; /* Permet de mieux gérer la largeur */
+    display: inline-block;
     width: 100%;
-    padding: 25px 0px;
+    padding: 7.5% 7.5%;
     margin: 0;
+    padding-left: 15%;
+}
+
+header img {
+	height: 1.5em;
+	display: inline-block;
+}
+
+header a {
+	background-color: #40a2f3;
+	padding: auto;
+	padding-top:40%;
 }
 
 
