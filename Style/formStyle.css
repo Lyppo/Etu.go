@@ -66,7 +66,7 @@ main {
 }
 
 #select {
-	background: linear-gradient(#6fe3e8,#cdf5f7);
+	background: linear-gradient(#F5F5F5,white);
 }
 
 .boutons {
@@ -74,7 +74,7 @@ main {
 	display:grid;
 	grid-template-rows: 50% 50%;
 	grid-template-columns:100%;
-	background: linear-gradient(#6fe3e8,#cdf5f7);
+	background: linear-gradient(#F5F5F5,white);
 	
 }
 
@@ -87,7 +87,7 @@ main {
 }
 
 .boutons h2 {
-	font-size:1.6em;
+	font-size:1em;
 	font-family:"Raleway";
 }
 
