@@ -17,9 +17,10 @@ function requestFullscreen() {
         }
     }
 }
-
+/*
 // Écoute les événements d'interaction de l'utilisateur
 document.addEventListener('click', requestFullscreen);
 document.addEventListener('keydown', requestFullscreen);
 document.addEventListener('touchstart', requestFullscreen);
 document.addEventListener('mousedown', requestFullscreen);
+*/

@@ -11,6 +11,7 @@ body {
 main {
     width: 100vw;
     height: 100vh;
+    background-color: #dee0df;
     background-image: url('../Images/BackGround.png');
     background-size: cover;
     background-position: center;
@@ -132,7 +133,7 @@ main {
 }
 
 #launch-app {
-    border: 1px solid red;
+    box-shadow: inset 0 0 10px red;
 }
 
 @media (hover: none), (pointer: coarse) {
@@ -261,7 +262,6 @@ main {
     height: 100%; /* Permet au lien de couvrir toute la hauteur de la div */
 }
 
-
-
-
-
+.fond-blanc {
+    background-image: none;
+}

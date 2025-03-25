@@ -7,5 +7,5 @@ const main = document.querySelector('main');
 main.prepend(camera, geste);
 
 document.getElementById("launch-app").addEventListener("click", function() {
-    window.location.href = "/";
+    window.location.href = "app.html";
 });
