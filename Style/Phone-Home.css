@@ -1,0 +1,100 @@
+/* ============================= */
+/* ========== GÉNÉRAL ========== */
+/* ============================= */
+
+main {
+    background: url('../Images/BackGround.png') center/cover no-repeat;
+}
+
+/* ========================================= */
+/* ========== BARRE TEMPS & MÉTÉO ========== */
+/* ========================================= */
+
+#time-and-weather-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes */
+    align-items: center;
+    margin: 5vh 3vh; /* Espacement proportionnel */
+}
+
+/* Style des textes de la barre temps/météo */
+#time-and-weather-bar p {
+    margin: 0;
+    font-family: "Comic Neue", cursive;
+}
+
+/* Alignement spécifique */
+#time-box {
+    text-align: left;
+}
+
+#weather-box {
+    text-align: right;
+}
+
+/* Style de l'heure */
+#time {
+    color: #C4AE8F;
+    font-size: 6vh;
+    -webkit-text-stroke: 0.5vh #5A3022;
+}
+
+/* Style de la date et description météo */
+#date, 
+#weather-description {
+    color: #5A3022;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+/* Icône météo */
+#weather-icon {
+    width: 8vh;
+}
+
+/* ======================================== */
+/* ========== BARRE DE RECHERCHE ========== */
+/* ======================================== */
+
+#search-bar {
+    background-color: rgba(2, 2, 2, 0.7);
+    padding: 1vh;
+    margin: 4vh;
+    margin-top: 26vh; /* Placement ajusté */
+    border-radius: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Taille des icônes de la barre de recherche */
+#search-bar img {
+    width: 3vh;
+}
+
+/* ========================================== */
+/* ========== POINTS DE NAVIGATION ========== */
+/* ========================================== */
+
+#windows-dots p {
+    margin: 2vh 0;
+    font-size: 5vh;
+}
+
+/* ============================================= */
+/* ========== ICONES DES APPLICATIONS ========== */
+/* ============================================= */
+
+.app-logo {
+    border-radius: 3vh;
+    width: 8.5vh;
+}
+
+/* Organisation des applications */
+.apps {
+    margin: 3vh;
+    display: flex;
+    justify-content: space-evenly; /* Répartit uniformément */
+    align-items: center;
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+}
