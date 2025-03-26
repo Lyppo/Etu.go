@@ -71,25 +71,25 @@ style.textContent = `
     }
     
     #heure {
-        left: 51vh;
+        left: 39%;
         margin: 0;
-        font-size: 2vh;
+        font-size: 1.8vh;
     }
-
+    
     #wifi {
-        left: 45vh;
+        left: 35%;
     }
-
+    
     #reseau {
-        left: 82vh;
+        left: 59%;
     }
-
+    
     #notif {
-        left: 85vh;
+        left: 62%;
     }
-
+    
     #batterie {
-        left: 88vh;
+        left: 65%;
     }
 
     /* sur pc */
