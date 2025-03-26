@@ -1,0 +1,36 @@
+.mes_lecons {
+    background-color: #77cfca;
+    height: 25vh;
+    font-size: 2.5vh;
+}
+
+.grid12 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    color: white;
+}
+
+.grid14 {
+    display: grid; 
+    grid-template-columns: 1fr 2fr 2fr 1fr; 
+    align-items: center; 
+    gap: 0.5vh;
+    height: 15vh;
+}
+
+.lecons_bloc {
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 3vh;
+    border: 0.2vh solid black;
+}
+
+.mes_lecons .grid14 img{
+    width: 3vh;
+    height: auto;
+}
+
+#fleche_gauche {
+    transform: rotate(180deg);
+}
