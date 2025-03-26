@@ -3,8 +3,42 @@ camera.id = 'camera';
 const geste = document.createElement('div');
 geste.id = 'geste';
 
+const wifi = document.createElement('img');
+wifi.id = 'wifi';
+wifi.src = '../Images/wifi.png';
+
+const heure = document.createElement('p');
+heure.id = 'heure';
+
+function obtenirHeure() {
+    const date = new Date();
+    let heures = date.getHours();
+    let minutes = date.getMinutes();
+    const ampm = heures >= 12 ? 'Pm' : 'Am';
+
+    heures = heures % 12;
+    heures = heures ? heures : 12;
+  
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+  
+    return `${heures}:${minutes} ${ampm}`;
+}
+heure.textContent = obtenirHeure();
+
+const reseau = document.createElement('img');
+reseau.id = 'reseau';
+reseau.src = '../Images/reseau.png';
+
+const notif = document.createElement('img');
+notif.id = 'notif';
+notif.src = '../Images/notif.png';
+
+const batterie = document.createElement('img');
+batterie.id = 'batterie';
+batterie.src = '../Images/batterie.png';
+
 const main = document.querySelector('main');
-main.prepend(camera, geste);
+main.prepend(camera, geste, wifi, heure, reseau, notif, batterie);
 
 const style = document.createElement('style');
 style.textContent = `
@@ -26,6 +60,36 @@ style.textContent = `
 
     #camera, #geste {
         display: none;
+    }
+
+    #heure, #wifi, #reseau, #notif, #batterie {
+        z-index: 10;
+        position: absolute;
+        top: 4.5vh;
+        transform: translate(-50%, -50%);
+        height: 1.8vh;
+    }
+    
+    #heure {
+        left: 39%;
+        margin: 0;
+        font-size: 1.8vh;
+    }
+    
+    #wifi {
+        left: 35%;
+    }
+    
+    #reseau {
+        left: 59%;
+    }
+    
+    #notif {
+        left: 62%;
+    }
+    
+    #batterie {
+        left: 65%;
     }
 
     /* sur pc */
