@@ -5,6 +5,8 @@ header {
 	padding-left:10%;
 	padding-right:10%;
 	padding-top:5%;
+	background-color:#8eddd8;
+	padding-bottom:5vh;
 }
 
 #infos-bar {
@@ -32,8 +34,8 @@ header {
 }
 
 #infos-bar img:last-of-type  {
-	width: 250%;
-	height:2em;
+	width: 9vh;
+	height:4vh;
 }
 
 #account img:first-of-type {
