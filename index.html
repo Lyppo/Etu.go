@@ -4,40 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etu.go</title>
-    <link rel="stylesheet" href="Style/Style.css">
-    <script src="Scripts/FullScreen.js"></script>
+    <link rel="stylesheet" href="Style/Phone-Home.css">
 </head>
 <body>
     <main>
+        <!-- Barre affichant l'heure et la météo -->
         <div id="time-and-weather-bar">
             <div id="time-box">
                 <p id="time">12h53</p>
                 <p id="date">Mar 12 Janvier</p>
             </div>
             <div id="weather-box">
-                <img id="weather-icon" src="Images/Weather.png" alt="Icon de la météo">
+                <img id="weather-icon" src="Images/Weather.png" alt="Icone de la météo">
                 <p id="weather-description">Aucune données</p>
             </div>
         </div>
+
+        <!-- Barre de recherche -->
         <div id="search-bar">
-            <img id="google-icon" src="Images/Google-Logo.svg" alt="Icon de google">
-            <img id="mic-icon" src="Images/Mic-logo.png" alt="Icon de micro">
+            <img id="google-icon" src="Images/Google-Logo.svg" alt="Icône de Google">
+            <img id="mic-icon" src="Images/Mic-logo.png" alt="Icône du micro">
         </div>
+
+        <!-- Première ligne d'applications -->
         <div id="first-app">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
-            <img id="launch-app" class="app-logo" src="Images/Etu.go-Logo.png" alt="Logo de l'application">
+            <img id="launch-app" class="app-logo" src="Images/Etu.go-Logo.png" alt="Logo principal de l'application">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
         </div>
+
+        <!-- Deuxième ligne d'applications -->
         <div id="second-app">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
         </div>
+
+        <!-- Indicateur de pagination (points) -->
         <div id="windows-dots">
             <p><span id="first-dot">.</span>..</p>
         </div>
+
+        <!-- Barre d'applications en bas -->
         <div id="bar-app">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
@@ -45,6 +55,8 @@
             <img class="app-logo" src="Images/Logo.png" alt="Logo de l'application">
         </div>
     </main>
-</body>
+
+    <!-- Script principal -->
     <script src="Scripts/Main.js"></script>
+</body>
 </html>
