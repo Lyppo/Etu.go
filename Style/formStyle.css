@@ -146,7 +146,7 @@ main {
 
 header {
 	display: grid;
-	grid-template-columns:20% 80%;
+	grid-template-columns:20% 60% 20%;
 	
 }	
 
@@ -172,10 +172,18 @@ header h1{
     padding-left: 15%;
 }
 
-header img {
+header a img {
 	height: 1.5em;
 	display: inline-block;
 }
+
+#logoh {
+	height: 1.5em;
+	display: inline-block;
+	background-color: #40a2f3;
+	padding-top: 35%;
+}
+
 
 header a {
 	background-color: #40a2f3;
