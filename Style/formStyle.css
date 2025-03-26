@@ -86,17 +86,25 @@ main {
 .boutons img {
 	height: 100%;
     	margin: auto;
-    	
-	
-	
 }
+
+#voir img {
+	height: 85%;
+    	margin: auto;
+}
+
+#modifier img {
+	height: 105%;
+    	margin: auto;
+}
+
 
 .boutons h2 {
 	font-size:2vh;
 	font-family:"Raleway";
 }
 
-@media (max-width:1200px) {
+@media (max-width:800px) {
 	.boutons {
 		display:grid;
 		grid-template-rows: 0% 100%;
