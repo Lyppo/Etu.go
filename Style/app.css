@@ -1,0 +1,65 @@
+/* css du header */
+
+header {
+	grid-template-rows: 33% 33% 33%;
+	padding-left:10%;
+	padding-right:10%;
+	padding-top:5%;
+}
+
+#infos-bar {
+	display:grid;
+	grid-template-columns: 10% 60% 10% 10% 10%;
+	height:70%;
+}
+
+#infos-bar img {
+	height: 50%;
+	margin: auto;
+}
+
+#infos-bar p {
+	text-align:left;
+	padding-left:5%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#account {
+	display:grid;
+	grid-template-columns: 20% 65% 15%;
+	height:6em;
+}
+
+#account img:first-of-type {
+	height: 5em;
+}
+
+#account img:last-of-type {
+	height: 3em;
+	padding-top: 25%;
+}
+
+#account div {
+	display:grid;
+	grid-template-rows: 40% 25%;
+}
+
+#account h2, #account p {
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:10%;
+}
+
+#texte-top {
+	padding-top:6%;
+}
+
+#bar img {
+	height:3em;
+	display:block;
+	padding-top:5%;
+}
+
+
