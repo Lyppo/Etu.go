@@ -65,6 +65,11 @@ main {
 	height: 50%;
 }
 
+#probleme {
+	text-align: right;
+	padding-right: 10%;
+}
+
 #select {
 	background: linear-gradient(#dee0df,#F5F5F5);
 }
@@ -87,8 +92,32 @@ main {
 }
 
 .boutons h2 {
-	font-size:1em;
+	font-size:2vh;
 	font-family:"Raleway";
+}
+
+@media (max-width:1200px) {
+	.boutons {
+		display:grid;
+		grid-template-rows: 0% 100%;
+		grid-template-columns:100%;
+		
+	
+	}
+
+	.boutons img {
+		height: 100%;
+	    	margin: auto;
+	    	
+		
+		
+	}
+
+	.boutons h2 {
+		visibility: hidden;
+		font-size:2vh;
+		font-family:"Raleway";
+	}
 }
 
 
