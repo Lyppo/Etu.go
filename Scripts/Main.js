@@ -5,7 +5,7 @@ geste.id = 'geste';
 
 const wifi = document.createElement('img');
 wifi.id = 'wifi';
-wifi.src = '../Images/wifi.png';
+wifi.src = 'Images/wifi.png';
 
 const heure = document.createElement('p');
 heure.id = 'heure';
@@ -27,15 +27,15 @@ heure.textContent = obtenirHeure();
 
 const reseau = document.createElement('img');
 reseau.id = 'reseau';
-reseau.src = '../Images/reseau.png';
+reseau.src = 'Images/reseau.png';
 
 const notif = document.createElement('img');
 notif.id = 'notif';
-notif.src = '../Images/notif.png';
+notif.src = 'Images/notif.png';
 
 const batterie = document.createElement('img');
 batterie.id = 'batterie';
-batterie.src = '../Images/batterie.png';
+batterie.src = 'Images/batterie.png';
 
 const main = document.querySelector('main');
 main.prepend(camera, geste, wifi, heure, reseau, notif, batterie);
