@@ -96,7 +96,7 @@ main {
 }
 
 #weather-icon {
-    width: 4vh;
+    width: 8vh;
 }
 
 #search-bar {
@@ -114,6 +114,11 @@ main {
     width: 3vh;
 }
 
+#windows-dots p {
+    margin: 2vh 0;
+    font-size: 5vh;
+}
+
 .app-logo {
     width: 10vh;
 }
@@ -124,32 +129,24 @@ main {
     padding: 0.75vh;
 }
 
-/* sur mobile */
-@media (hover: none), (pointer: coarse) {
-    #time-and-weather-bar {
-        margin-top: 2.5vh;
-    }
-    #search-bar {
-        margin: 4.5vh 4vh;
-        margin-top: 32vh;
-    }
-}
-
 /* page d'acceuil */
 
-.titre-app {
+header {
+    background-color: #40a2f3;
+    border-bottom: 0.3vh solid #40a2f3;
+    display: inline-block;
+    width: 100%;
+}
+
+header * {
     font-size: 4vh;
     font-weight: bold;
     text-align: center;
     color: #dee0df;
     text-transform: uppercase;
     letter-spacing: 0.2vh;
-    background-color: #40a2f3;
     padding: 2.5vh 0;
     margin: 0;
-    border-bottom: 0.3vh solid #40a2f3;
-    display: inline-block;
-    width: 100%;
 }
 
 .boite-cours, .bulle {
