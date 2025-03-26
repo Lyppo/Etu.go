@@ -44,9 +44,9 @@ header {
 }
 
 #account img:last-of-type {
-	height: 7vh;
+	height: 5vh;
 	padding-top: 25%;
-	width: 7vh;
+	width: 5vh;
 }
 
 #account div {
