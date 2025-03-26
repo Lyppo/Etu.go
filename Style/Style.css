@@ -149,7 +149,7 @@ header * {
     margin: 0;
 }
 
-.boite-cours, .bulle {
+.bulle {
     height: 10vh;
     background-color: #dee0df;
     padding: 2vh;
@@ -163,23 +163,17 @@ header * {
     transition: background-color 0.3s ease;
 }
 
-.boite-cours:hover, .bulle:hover {
+.bulle:hover {
     background-color: #838383;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1vh;
-}
-
-.grid-prog {
+.grid21 {
     display: grid;
     grid-template-columns: 1fr 4fr;
     gap: 1vh;
 }
 
-.grid4 {
+.grid22 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -190,31 +184,26 @@ header * {
     background-color: #40a2f3;
     height: 10vh;
     width: 10vh;
-    border-radius: 50%;
+    border-radius: 50vh;
     box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.5);
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.grid .rond {
-    background-color: #59e2ca;
-    grid-column: 2;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-right: 5vh;
-    transition: background-color 0.3s ease;
-}
-
-.grid .rond:hover {
-    background-color: #3d9d84;
-}
-
-.texte {
-    font-size: 4vh;
+#numday {
+    font-size: 7vh;
     color: white;
     font-weight: bold;
+    margin: 0;
+    margin-top: 2vh;
+    line-height: 0.7;
+}
+
+#day {
+    font-size: 0.7em;
+    color: white;
+    margin: 0;
+    
 }
 
 .link {
@@ -223,6 +212,12 @@ header * {
     color: inherit;
     width: 100%;
     height: 100%;
+}
+
+#image_cours {
+    float: right;
+    max-width: 100%; 
+    height: auto;
 }
 
 .fond-blanc {
