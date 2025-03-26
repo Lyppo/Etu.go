@@ -1,9 +1,11 @@
+/* every page */
+
 body {
     background-color: #222;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100vh;
     margin: 0;
 }
@@ -22,14 +24,15 @@ main {
     display: none;
 }
 
+/* sur pc */
 @media (hover: hover) and (pointer: fine) {
     main {
-        height: 95%;
+        height: 95vh;
         width: auto;
         aspect-ratio: 9 / 18;
-        border-radius: 25px;
-        box-shadow: #fff 0px 0px 10px;
-        border: 3px solid #000;
+        border-radius: 3vh;
+        box-shadow: #fff 0 0 1vh;
+        border: 0.3vh solid #000;
         overflow: hidden;
     }
 
@@ -38,36 +41,30 @@ main {
         z-index: 10;
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translateX(-50%);
         background-color: #000;
     }
 
     #camera {
-        top: calc(20px + 3%);
+        top: calc(2vh + 3%);
         border-radius: 50%;
-        width: 15px;
-        height: 15px;
-        box-shadow: inset #888 0px 0px 5px;
+        width: 1.5vh;
+        height: 1.5vh;
+        box-shadow: inset #888 0 0 0.5vh;
     }
 
     #geste {
-        bottom: calc(20px + 2%);
-        border-radius: 5px;
-        width: 150px;
-        height: 5px;
+        bottom: calc(2vh + 2%);
+        border-radius: 0.5vh;
+        width: 15vh;
+        height: 0.5vh;
     }
 }
 
-/* home phone style */
-
-.app-logo {
-    width: 80px;
-    margin: 5px;
-}
-
+/* Home Phone */
 #time-and-weather-bar {
     display: grid;
-    margin: 50px 30px;
+    margin: 5vh 3vh;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
@@ -88,178 +85,147 @@ main {
 
 #time {
     color: #C4AE8F;
-    font-size: 3em;
-    -webkit-text-stroke: 2px #5A3022;
+    font-size: 6vh;
+    -webkit-text-stroke: 0.5vh #5A3022;
 }
 
 #date, #weather-description {
     color: #5A3022;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 2vh;
 }
 
 #weather-icon {
-    width: 4em;
+    width: 4vh;
 }
 
 #search-bar {
     background-color: rgba(2, 2, 2, 0.7);
-    padding: 10px;
-    margin: 25px 40px;
-    margin-top: 260px;
-    border-radius: 25px;
+    padding: 1vh;
+    margin: 4vh 4vh;
+    margin-top: 26vh;
+    border-radius: 3vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 #search-bar img {
-    width: 30px;
+    width: 3vh;
 }
 
-#second-app {
-    margin: 5px 0;
-}
-
-#windows-dots p {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 3em;
-    font-family: "Comic Neue", cursive;
-    margin: 0;
-}
-
-#first-dot {
-    color: #222;
+.app-logo {
+    width: 10vh;
 }
 
 #launch-app {
-    /*box-shadow: inset 0 0 10px red;*/
+    border-radius: 2vh;
+    width: 8.5vh;
+    padding: 0.75vh;
 }
 
+/* sur mobile */
 @media (hover: none), (pointer: coarse) {
     #time-and-weather-bar {
-        margin-top: 25px;
+        margin-top: 2.5vh;
     }
     #search-bar {
-        margin: 45px 40px;
-        margin-top: 320px;
-    }
-    #second-app {
-        margin-top: 10px;
+        margin: 4.5vh 4vh;
+        margin-top: 32vh;
     }
 }
 
-/*-------------------------------------------------------------*/
+/* page d'acceuil */
 
 .titre-app {
-    font-size: 32px; 
-    font-weight: bold; 
-    text-align: center; 
-    color: #dee0df; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+    color: #dee0df;
+    text-transform: uppercase;
+    letter-spacing: 0.2vh;
     background-color: #40a2f3;
-    /*-webkit-background-clip: text; /* Applique le dégradé uniquement sur le texte */
-    /*-webkit-text-fill-color: transparent; /* Rend le texte transparent pour afficher le dégradé */
-
-    padding: 10px; /* Espacement autour du texte */
-    border-bottom: 3px solid #40a2f3; /* Ligne en dessous pour un effet stylisé */
-    display: inline-block; /* Permet de mieux gérer la largeur */
-    width: 100%;
-    padding: 25px 0px;
+    padding: 2.5vh 0;
     margin: 0;
+    border-bottom: 0.3vh solid #40a2f3;
+    display: inline-block;
+    width: 100%;
 }
-
 
 .boite-cours, .bulle {
-    height: 100px;
+    height: 10vh;
     background-color: #dee0df;
-    padding: 2%;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    display: flex; /* Active flexbox */
-    align-items: center; /* Centre verticalement le contenu */
-    justify-content: flex-start; /* Aligne les éléments vers la gauche */
-    margin: 20px;
-    cursor: pointer; /* Le curseur devient une main */
-    transition: background-color 0.3s ease; /* Animation douce pour le changement de couleur */
+    padding: 2vh;
+    border-radius: 2vh;
+    box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Applique l'effet de grisage sur toute la div (pas seulement le texte) */
 .boite-cours:hover, .bulle:hover {
-    background-color: #838383; /* Grisage au survol */
+    background-color: #838383;
 }
 
 .grid {
-    display: grid; /* Active le grid */
-    grid-template-columns: 2fr 1fr; /* Première colonne plus large, deuxième colonne plus petite */
-    gap: 10px; /* Espacement entre les colonnes */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1vh;
 }
 
 .grid-prog {
-    display: grid; /* Active le grid */
-    grid-template-columns: 1fr 4fr; /* Première colonne plus large, deuxième colonne plus petite */
-    gap: 10px; /* Espacement entre les colonnes */
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1vh;
 }
 
 .grid4 {
-    display: grid; /* Active le grid */
-    grid-template-columns: 1fr 1fr; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px; /* Espacement entre les colonnes */
-}
-
-.grid .boite-cours {
-    grid-column: 1; /* Positionne "Mes cours" dans la première colonne */
-}
-
-.bulle .grid .rond {
-    grid-column: 1;
+    gap: 1vh;
 }
 
 .rond {
-    margin: 0px;
     background-color: #40a2f3;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* rond vert dans la grille */
 .grid .rond {
-    background-color: #59e2ca; /* Couleur initiale du rond vert */
-    grid-column: 2; /* Positionne le rond dans la deuxième colonne */
-    align-items: center; /* Centre le contenu verticalement dans la cellule */
-    justify-content: center; /* Centre horizontalement */
+    background-color: #59e2ca;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    margin-right: 30%;
-    transition: background-color 0.3s ease; /* Ajout d'une transition pour un effet doux */
+    margin-right: 5vh;
+    transition: background-color 0.3s ease;
 }
 
-/* Lorsque le rond vert est survolé, il devient plus foncé */
 .grid .rond:hover {
-    background-color: #3d9d84; /* Couleur plus foncée du rond au survol */
+    background-color: #3d9d84;
 }
 
 .texte {
-    font-size: 200%;
+    font-size: 4vh;
     color: white;
     font-weight: bold;
 }
 
-/* Style spécifique pour les liens */
 .link {
-    display: block; /* Permet à l'élément <a> de couvrir toute la div */
-    text-decoration: none; /* Enlève le soulignement des liens */
-    color: inherit; /* Assure que la couleur du texte reste la même */
-    width: 100%; /* S'assure que le lien couvre toute la taille de la div */
-    height: 100%; /* Permet au lien de couvrir toute la hauteur de la div */
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
 }
 
 .fond-blanc {
