@@ -1,6 +1,6 @@
 .lancement {
     height: 100%;
-    background-color: #9fbdc0;
+    background-color: #8eddd8;
 }
 
 #logo {
@@ -8,12 +8,15 @@
     max-width: 100%;
 }
 
+.lancement a {
+    text-decoration: none;
+}
+
 .cestparti {
     border-radius: 4vh;
     background-color: #007aff;
     width: 30vh;
     height: 7vh;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,6 @@
 .lancement_2 {
     height: 100%;
-    background-color: #9fbdc0;
+    background-color: #8eddd8;
 }
 
 #logo {
@@ -21,6 +21,25 @@
 }
 
 .questions p {
+    margin: 1vh;
+    color: white;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.continuer {
+    border-radius: 2vh;
+    background-color: #007aff;
+    width: 38vh;
+    margin: auto;
+    margin-top: 25vh;
+    height: 6.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.continuer p {
     margin: 1vh;
     color: white;
     font-size: 2vh;
