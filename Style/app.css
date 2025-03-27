@@ -140,13 +140,13 @@ footer div {
 }
 
 
-footer a div img {
+footer div a img {
 	width:4vh;
 	height:4vh;
 	margin:auto;
 }
 
-footer a div p {
+footer div a p {
 	height:4vh;
 	font-size:1.5vh;
 	text-align:center;
@@ -155,7 +155,7 @@ footer a div p {
 	color:white;
 }
 
-footer a {
+footer div a {
 	text-decoration: none;
 }
 
