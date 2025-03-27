@@ -92,10 +92,10 @@ footer {
    	bottom: 0;
    	width:40vh;
    	padding-top:2.5vh;
-   	margin-bottom:2.5vh;
    	margin-left:3.8vh;
    	background-color:#8eddd8;
    	border-radius: 2em 2em 0 0;
+   	bottom: 0;
    	
 }
 
