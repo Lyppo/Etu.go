@@ -1,5 +1,6 @@
 /* css du header */
 
+
 header {
 	grid-template-rows: 33% 33% 33%;
 	padding-left:10%;
@@ -87,6 +88,15 @@ header {
 footer {
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
+	position: absolute;
+   	bottom: 0;
+   	width:40vh;
+   	padding-top:2.5vh;
+   	margin-bottom:2.5vh;
+   	margin-left:3.8vh;
+   	background-color:#8eddd8;
+   	border-radius: 2em 2em 0 0;
+   	
 }
 
 footer div {
@@ -100,14 +110,16 @@ footer div {
 footer div img {
 	width:4vh;
 	height:4vh;
+	margin:auto;
 }
 
 footer div p {
-	width:4vh;
 	height:4vh;
 	font-size:1.5vh;
 	text-align:center;
 	width:10vh;
+	margin:1vh;
+	color:white;
 }
 
 /* -----------------------------------------------------------*/

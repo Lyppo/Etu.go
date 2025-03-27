@@ -37,8 +37,10 @@ const batterie = document.createElement('img');
 batterie.id = 'batterie';
 batterie.src = 'Images/batterie.png';
 
-const main = document.querySelector('main');
-main.prepend(camera, geste, wifi, heure, reseau, notif, batterie);
+const bar = document.querySelector('#info-bar');
+bar.prepend(camera, geste, wifi, heure, reseau, notif, batterie);
+bar.style.paddingTop = "3vh";
+
 
 const style = document.createElement('style');
 style.textContent = `
@@ -62,9 +64,17 @@ style.textContent = `
         display: none;
     }
 
+    #info-bar {
+    	display:grid;
+    	grid-template-columns: 10% 60% 10% 10% 10%;
+    }	
+    
+    #info-bar p {
+    	padding-left:5vh;
+    }
+
     #heure, #wifi, #reseau, #notif, #batterie {
         z-index: 10;
-        position: absolute;
         top: 4.5vh;
         transform: translate(-50%, -50%);
         height: 1.8vh;
