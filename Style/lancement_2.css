@@ -1,0 +1,29 @@
+.lancement_2 {
+    height: 100%;
+    background-color: #9fbdc0;
+}
+
+#logo {
+    margin-top: 5vh;
+    max-width: 17vh;
+}
+
+.questions {
+    border-radius: 3.2vh;
+    background-color: #007aff;
+    width: 42vh;
+    margin: auto;
+    margin-top: 25vh;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions p {
+    margin: 1vh;
+    color: white;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
