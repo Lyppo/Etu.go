@@ -2,17 +2,17 @@
 
 main { 
 	justify-content:center;
-	display:flex;
 }
 
 header {
+	
 	grid-template-rows: 33% 33% 33%;
 	padding-left:10%;
 	padding-right:10%;
 	padding-top:5%;
 	background-color:#8eddd8;
 	padding-bottom:5vh;
-	height:19vh;
+	height:21vh;
 }
 
 #infos-bar {
@@ -37,6 +37,7 @@ header {
 	display:grid;
 	grid-template-columns: 20% 65% 15%;
 	height:10vh;
+	padding-top:1vh;
 }
 
 #infos-bar img:last-of-type  {
@@ -66,10 +67,12 @@ header {
 	text-align:left;
 	padding-left:10%;
 	width: 100%;
+	font-family: "Arial";
 }
 
 #account h2 {
-	   font-size: 2.5vh;
+	   font-size: 2vh;
+	   padding-top:1vh;
 }
 
  #account p {
@@ -80,11 +83,30 @@ header {
 	padding-top:6%;
 }
 
-#bar img {
-	width:100%;
-	display:block;
-	padding-top:5%;
+#bar a p {
+	font-size:1.6vh;
+	color:black;
+	font-family: "Arial";
+	margin:0;
+	padding-top:1vh;
+	padding-bottom:1vh;
 }
+
+#bar a {
+	text-decoration: none;
+}
+
+#bar {
+	width:33vh;
+	background-color:#77cfca;
+	margin:auto;
+	border-radius: 3vh;
+	margin-top:1vh;
+	padding-top:1vh;
+	padding-bottom:1vh;
+	outline: 0.5px solid #6e9c9a;
+}
+
 
 /*----------------------------------------------------------*/
 
@@ -99,6 +121,8 @@ footer {
    	padding-top:2.5vh;
    	background-color:#8eddd8;
    	border-radius: 5vh 5vh 0 0;
+   	justify-self: center;
+   	margin-left:3.8vh;
    	
    	
 }
