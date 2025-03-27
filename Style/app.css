@@ -112,6 +112,11 @@ header {
 
 /* css du footer */
 
+#centre {
+	display:grid;
+	justify-content:center;
+}
+
 footer {
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
@@ -122,7 +127,7 @@ footer {
    	background-color:#8eddd8;
    	border-radius: 5vh 5vh 0 0;
    	justify-self: center;
-   	margin-left:3.8vh;
+   	
    	
    	
 }
@@ -135,19 +140,23 @@ footer div {
 }
 
 
-footer div img {
+footer a div img {
 	width:4vh;
 	height:4vh;
 	margin:auto;
 }
 
-footer div p {
+footer a div p {
 	height:4vh;
 	font-size:1.5vh;
 	text-align:center;
 	width:10vh;
 	margin:1vh;
 	color:white;
+}
+
+footer a {
+	text-decoration: none;
 }
 
 /* -----------------------------------------------------------*/
