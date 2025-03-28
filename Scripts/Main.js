@@ -68,6 +68,7 @@ style.textContent = `
     }
 
     #heure, #wifi, #reseau, #notif, #batterie {
+        position: absolute;
         z-index: 10;
         top: 4.5vh;
         transform: translate(-50%, -50%);
