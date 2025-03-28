@@ -52,7 +52,7 @@
 
 #date-f input {
 	background-color:#8edde8;
-	width:16vh;
+	width:14vh;
 		
 }
 
@@ -188,7 +188,7 @@ footer {
    	background-color:#8eddd8;
    	border-radius: 5vh 5vh 0 0;
    	justify-self: center;
-   	align-items:center;
+   	align-items:end;
    	
    	
 }
@@ -196,7 +196,7 @@ footer {
 footer div {
 	display: grid;
 	grid-template-rows: 50% 50%;
-	align-items:center;
+	align-items:end;
 	justify-content: center;
 }
 
