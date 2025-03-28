@@ -76,7 +76,7 @@ style.textContent = `
     }
     
     #heure {
-        left: 55px;
+        left: 70px;
         margin: 0;
         font-size: 1.8vh;
     }
@@ -86,11 +86,11 @@ style.textContent = `
     }
     
     #reseau {
-        right: 60px;
+        right: 100px;
     }
     
     #notif {
-        right: 40px;
+        right: 60px;
     }
     
     #batterie {
