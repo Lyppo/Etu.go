@@ -1,3 +1,63 @@
+/* Css du formulaire de formation */
+
+#question, #formulaire label {
+	font-family: "Arial";
+}
+
+#formulaire label {
+	font-size:3vh;
+	padding:1vh;
+}
+
+#question {
+	font-size:4vh;
+	background-color:#8edde8;
+	padding-top:1vh;
+	padding-bottom:1vh;
+	margin:0;
+	background-color:#77cfca;
+}
+
+#formulaire div {
+	font-size:2.5vh;
+	margin:1vh;
+	background-color:#77cfca;
+	border-radius: 3vh;
+	outline: 2px solid #6e9c9a;
+	padding:1vh;
+	display:grid;
+	justify-content:center;
+	
+}
+
+#formulaire div label label label{
+	justify-self:left;
+	
+}
+
+#formulaire div label label {
+	display:grid;
+	grid-template-columns: 20% 80%;
+	
+	
+}
+
+#formulaire {
+	display:grid;
+	grid-template-rows: 33% 33% 33%;
+	padding:2vh;
+	background-color:#77cfca;
+	height:100%;
+}
+
+#date-f input {
+	background-color:#8edde8;
+	width:14vh;
+		
+}
+
+/*----------------------------------------------------------------------------------*/
+
 /* css du header */
 
 main { 
@@ -115,6 +175,7 @@ header {
 #centre {
 	display:grid;
 	justify-content:center;
+	
 }
 
 footer {
@@ -123,11 +184,11 @@ footer {
 	position: fixed;
 	bottom:0;
    	width:40vh;
-   	padding-top:2.5vh;
+   	
    	background-color:#8eddd8;
    	border-radius: 5vh 5vh 0 0;
    	justify-self: center;
-   	
+   	align-items:end;
    	
    	
 }
@@ -135,8 +196,10 @@ footer {
 footer div {
 	display: grid;
 	grid-template-rows: 50% 50%;
-	align-items:center;
+	align-items:end;
 	justify-content: center;
+	bottom:0;
+	
 }
 
 
