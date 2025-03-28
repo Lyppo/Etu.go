@@ -37,9 +37,8 @@ const batterie = document.createElement('img');
 batterie.id = 'batterie';
 batterie.src = 'Images/batterie.png';
 
-const bar = document.querySelector('#info-bar');
+const bar = document.querySelector('main');
 bar.prepend(camera, geste, wifi, heure, reseau, notif, batterie);
-bar.style.paddingTop = "3vh";
 
 
 const style = document.createElement('style');
@@ -63,43 +62,39 @@ style.textContent = `
     #camera, #geste {
         display: none;
     }
-
-    #info-bar {
-    	display:grid;
-    	grid-template-columns: 10% 60% 10% 10% 10%;
-    }	
     
     #info-bar p {
     	padding-left:5vh;
     }
 
     #heure, #wifi, #reseau, #notif, #batterie {
+        position: absolute;
         z-index: 10;
-        top: 4.5vh;
+        top: 3vh;
         transform: translate(-50%, -50%);
         height: 1.8vh;
     }
     
     #heure {
-        left: 39%;
+        left: 70px;
         margin: 0;
         font-size: 1.8vh;
     }
     
     #wifi {
-        left: 35%;
+        left: 20px;
     }
     
     #reseau {
-        left: 59%;
+        right: 100px;
     }
     
     #notif {
-        left: 62%;
+        right: 60px;
     }
     
     #batterie {
-        left: 65%;
+        right: 20px;
     }
 
     /* sur pc */
@@ -136,6 +131,32 @@ style.textContent = `
             border-radius: 0.5vh;
             width: 15vh;
             height: 0.5vh;
+        }
+        
+        #heure {
+            left: calc(50vw - 16vh);
+            margin: 0;
+            font-size: 1.8vh;
+        }
+
+        #heure, #wifi, #reseau, #notif, #batterie {
+            top: 4.5vh;
+        }
+    
+        #wifi {
+            left: calc(50vw - 21vh);
+        }
+        
+        #reseau {
+            left: calc(50vw + 15vh);
+        }
+        
+        #notif {
+            left: calc(50vw + 18vh);
+        }
+        
+        #batterie {
+            left: calc(50vw + 21vh);
         }
     }
 `;
