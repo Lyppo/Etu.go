@@ -37,7 +37,7 @@
 
 #formulaire div label label {
 	display:grid;
-	grid-template-columns: 20% 80%;
+	grid-template-columns: 10% 80%;
 	
 	
 }
@@ -48,6 +48,7 @@
 	padding:2vh;
 	background-color:#77cfca;
 	height:100%;
+	overflow: scroll;
 }
 
 #date-f input {
@@ -177,9 +178,7 @@ header {
 	justify-content:center;
    	align-items:center;
    	position:fixed;
-
-	
-
+   	top: 100%; left: 50%; /* à 50%/50% du parent référent */
 }
 
 footer {
@@ -190,10 +189,9 @@ footer {
    	border-radius: 5vh 5vh 0 0;
    	padding-top:3vh;
    	position: absolute;
-   	top: 100; left: 50%; /* à 50%/50% du parent référent */
-  	transform: translate(-50%, 0); /* décalage de 50% de sa propre taille */
   	bottom:0;
   	height:8vh;
+  	transform: translate(-50%, 0); /* décalage de 50% de sa propre taille */
    	
    	
 }
