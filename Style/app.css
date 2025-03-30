@@ -194,7 +194,7 @@ footer {
 }
 
 footer div {
-	display: grid;
+	display: static;
 	grid-template-rows: 50% 50%;
 	align-items:end;
 	justify-content: center;
@@ -211,7 +211,6 @@ footer div a img {
 
 footer div a p {
 	height:1vh;
-	padding:1vh;
 	font-size:1.5vh;
 	text-align:center;
 	width:10vh;
