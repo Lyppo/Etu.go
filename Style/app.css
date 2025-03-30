@@ -182,12 +182,12 @@ footer {
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
    	width:45vh;
-   	height:10vh;
    	background-color:#8eddd8;
    	border-radius: 5vh 5vh 0 0;
-   	bottom:0;	
+   	padding-top:3vh;
+   	padding-bottom:1vh;
    	position: absolute;
-   	top: 93%; left: 50%; /* à 50%/50% du parent référent */
+   	top: 90%; left: 50%; /* à 50%/50% du parent référent */
   	transform: translate(-50%, 0); /* décalage de 50% de sa propre taille */
    	
    	
@@ -196,7 +196,6 @@ footer {
 footer div {
 	display: grid;
 	grid-template-rows: 50% 50%;
-	align-items:end;
 	justify-content: center;
 	
 }
