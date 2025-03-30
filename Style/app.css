@@ -10,9 +10,9 @@
 }
 
 #question {
-	font-size:4vh;
+	font-size:3vh;
 	background-color:#8edde8;
-	padding-top:1vh;
+	padding-top:3vh;
 	padding-bottom:1vh;
 	margin:0;
 	background-color:#77cfca;
@@ -72,7 +72,7 @@ header {
 	padding-top:5%;
 	background-color:#8eddd8;
 	padding-bottom:5vh;
-	height:21vh;
+	height:16vh;
 }
 
 #infos-bar {
