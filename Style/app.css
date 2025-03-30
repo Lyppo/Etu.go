@@ -185,11 +185,11 @@ footer {
    	background-color:#8eddd8;
    	border-radius: 5vh 5vh 0 0;
    	padding-top:3vh;
-   	padding-bottom:1vh;
    	position: absolute;
    	top: 90%; left: 50%; /* à 50%/50% du parent référent */
   	transform: translate(-50%, 0); /* décalage de 50% de sa propre taille */
-  	bottom:15;
+  	bottom:0;
+  	height:8vh;
    	
    	
 }
