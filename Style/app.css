@@ -44,7 +44,6 @@
 
 #formulaire {
 	display:grid;
-	grid-template-rows: 33% 33% 33%;
 	padding:2vh;
 	background-color:#77cfca;
 	height:100%;

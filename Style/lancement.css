@@ -58,7 +58,7 @@ a {
     max-width: 17vh;
 }
 
-.questions {
+.questions, #question1 {
     border-radius: 3.2vh;
     background-color: #007aff;
     width: 42vh;
@@ -70,14 +70,14 @@ a {
     justify-content: center;
 }
 
-.questions p {
+#question1 p, .questions p{
     margin: 1vh;
     color: white;
     font-size: 2vh;
     font-weight: bold;
 }
 
-.continuer {
+#continuer {
     border-radius: 2vh;
     background-color: #007aff;
     width: 38vh;
@@ -92,11 +92,20 @@ a {
     bottom: 7vh;
 }
 
-.continuer p {
+#continuer p {
     margin: 1vh;
     color: white;
     font-size: 2vh;
     font-weight: bold;
+}
+
+#continuer:hover {
+    background-color: #005bbf; /* Couleur plus foncée au survol */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
+#continuer:hover p {
+    color: #e0e0e0; /* Légèrement plus clair pour un meilleur contraste */
 }
 
 /*----------------------------------*/
@@ -123,16 +132,20 @@ a {
     max-width: 15vh;
 }
 
-.niveau .questions, .domaine_etudes .questions{
+.questions{
     margin: auto;
     border-radius: 10vh;
     height: max-content;
     width: 30vh;
 }
 
-.niveau .questions p,  .domaine_etudes .questions p{
+.questions p{
     font-size: 2.7vh;
     margin: 0 4vh 0 4vh;
+}
+
+.temps_rev .questions p{
+    font-size: 2.2vh;
 }
 
 .liste {
@@ -143,7 +156,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1vh;
+    gap: 0.5vh;
     width: 100%;
 }
 
@@ -168,8 +181,67 @@ a {
     flex: 1;
     text-align: center;
     margin: 0;
+    color: #637879;
 }
+
+.liste li:hover {
+    background-color: #5fa09c; /* Couleur plus foncée au survol */
+    border-color: #4c6061; /* Assombrit la bordure */
+}
+
+.liste li:hover p {
+    color: #ffffff; /* Change la couleur du texte pour un meilleur contraste */
+}
+
 
 .domaine_etudes .progression {
     width: 20vh;
 }
+
+.evaluation .progression {
+    width: 30vh;
+}
+
+.temps_rev .progression {
+    width: 40vh;
+}
+
+.pret .progression {
+    width: 42vh;
+}
+
+.connexion .progression {
+    width: auto;
+}
+
+.pret p {
+    margin-top: 15vh;
+    font-size: 4.7vh;
+    color: white;
+    font-weight: bold;
+}
+
+/*-----------------------------*/
+/*Page de connexion*/
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: auto;
+}
+
+.champ {
+    padding: 1.5vh;
+    border: 0.2vh solid #637879;
+    border-radius: 2vh;
+    font-size: 2vh;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+}
+
+.champ:focus {
+    background-color: #e7e6e6;
+}
+
