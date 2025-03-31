@@ -164,6 +164,7 @@ style.textContent = `
             width:42vh;
             padding-bottom:3vh;
         }
+        
     }
 `;
 
