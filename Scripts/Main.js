@@ -107,6 +107,12 @@ style.textContent = `
             box-shadow: #fff 0 0 1vh;
             border: 0.3vh solid #000;
             overflow: hidden;
+	        overflow-y: auto;
+            scrollbar-width: none; /* Cacher la barre sur Firefox */
+        }
+
+        main::-webkit-scrollbar {
+            display: none; /* Cacher la barre sur Chrome, Safari, Edge */
         }
 
         #camera, #geste {

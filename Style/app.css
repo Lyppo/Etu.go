@@ -81,8 +81,6 @@
 /* css du header */
 
 main { 
-	justify-content:center;
-	overflow-y: auto;
     max-height: 100vh;
 }
 
