@@ -10,6 +10,9 @@ function obtenirMatieres() {
 var matieres = obtenirMatieres();
 
 if (matieres.length != 0) {
+	const h2 = document.createElement('h2');
+	h2.textContent = "Ton planning de révision"
+	
 	const planning = document.createElement('table');
 	const tr = document.createElement('tr');
 
@@ -69,6 +72,7 @@ if (matieres.length != 0) {
 
 
 	const pl = document.getElementById('planning');
+	
 	pl.appendChild(planning);
 }
 
