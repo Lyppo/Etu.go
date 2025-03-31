@@ -28,14 +28,23 @@
 		
 		<div id="formulaire">
 			<form method="post" action="save.php">
-				<div class="form-example">
-   					 <input type="submit" value="Créer le planning" />
-  				</div>
 				<div id="date-f">	
 					<label> Selectionnez la date des examens :<labre>
 					<br>
 					<input type="date" id="html" name="fav_language">
 				</div>
+				<div id="niveau-f">
+  					<label> As tu déjà des bases dans ces cours :<label>
+  		
+  					<input type="radio" name="aucune" value="Aucune">
+					  <label for="..."> Aucune </label>
+					  <input type="radio" name="intermediaire" value="intermediaire">
+					  <label for="..."> J'ai des connaisances mais elles sont insuffisantes </label>
+					  <input type="radio" name="expert" value="expert">
+					  <label for="..."> Je suis un expert </label>
+
+  				</div>
+				
   				<div id="matiere-f">
   					<label> Selectionnez les matières à réviser :<label>
   		
@@ -58,6 +67,9 @@
 					  <label for="css">Normal</label>
 					  <input type="radio" id="javascript" name="choix" value="Express">
 					  <label for="javascript">Express</label>
+  				</div>
+  				<div class="form-example">
+   					 <input type="submit" value="Créer le planning" />
   				</div>
 			
 			</form>
