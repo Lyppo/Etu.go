@@ -1,5 +1,5 @@
 document.getElementById("launch-app").addEventListener("click", function() {
-    window.location.href = "accueil.html";
+    window.location.href = "lancement.html";
 });
 
 function obtenirHeure() {
