@@ -1,68 +1,147 @@
-const URL = 'https://etu-go.antodu72210.workers.dev/';
+const URL = "https://etu-go.antodu72210.workers.dev/";
 
-// Fonction pour initialiser le cookie avec l'ID
-function setCookie(id) {
-    const expires = new Date();
-    expires.setFullYear(expires.getFullYear() + 100); // Le cookie dure 100 ans (effectivement "infinie")
-    document.cookie = `user_id=${id}; expires=${expires.toUTCString()}; path=/`;
+/* ==========================
+  FONCTIONS COOKIES
+========================== */
+
+// Supprime tous les cookies
+function clearCookies() {
+  document.cookie.split("; ").forEach((cookie) => {
+    let [key] = cookie.split("=");
+    document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+  });
+  console.log("✅ Tous les cookies ont été supprimés !");
 }
 
-// Fonction pour récupérer l'ID à partir du cookie
-function getID() {
-    // Récupérer tous les cookies
-    const cookies = document.cookie.split('; ');
-  
-    // Chercher le cookie 'user_id'
-    const userIdCookie = cookies.find(cookie => cookie.startsWith('user_id='));
-  
-    // Si le cookie existe, extraire l'ID et le retourner
-    if (userIdCookie) {
-        const userId = userIdCookie.split('=')[1]; // Extraire la valeur après '='
-        return userId;
-    } else {
-        // Si le cookie n'existe pas, retourner -1
-        return false;
-    }
+// Crée un cookie
+function setCookie(name, value, days = 36500) {
+  const expires = new Date();
+  expires.setDate(expires.getDate() + days);
+  if (name == "name") value = value.replace(/\s+/g, "_");
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires.toUTCString()}; path=/;`;
 }
-  
-// Fonction pour créer un nouvel utilisateur
+
+// Récupère un cookie spécifique
+function getCookie(name) {
+  const cookies = document.cookie.split("; ");
+  for (let cookie of cookies) {
+    let [key, value] = cookie.split("=");
+    if (key === name) return decodeURIComponent(value);
+  }
+  return null;
+}
+
+// Récupère tous les cookies sous forme d’objet
+function getProfilInfo() {
+  let cookieDict = {};
+  document.cookie.split("; ").forEach((cookie) => {
+    let [key, value] = cookie.split("=");
+    cookieDict[key] = decodeURIComponent(value);
+  });
+  return cookieDict;
+}
+
+/* ==========================
+  FONCTIONS UTILISATEUR
+========================== */
+
+// 📌 Envoie les infos utilisateur (création / mise à jour)
 async function newUser() {
-    try {
-      // Exécution de la requête GET vers le worker
-      const response = await fetch('https://etu-go.antodu72210.workers.dev/', { method: 'GET' });
-  
-      // Vérifie si la réponse est correcte
-      if (!response.ok) {
-        throw new Error('Erreur lors de la création de l\'utilisateur');
-      }
-  
-      const data = await response.json();
-      
-      // Initialisation du cookie avec l'ID récupéré
-      setCookie(data.id);
-  
-      console.log('Nouvel utilisateur créé, ID stocké dans le cookie:', data.id);
+  try {
+    let cookiesData = getProfilInfo();
+    const requiredFields = ["name", "mdp", "nv_etude", "type_etude", "type_eval", "work_time"];
 
-      return data.id;
-    } catch (error) {
-      console.error('Erreur dans la création de l\'utilisateur:', error);
+    for (let field of requiredFields) {
+      if (!cookiesData[field]) throw new Error(`❌ Champ manquant : ${field}`);
     }
+
+    const response = await fetch(URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cookiesData),
+    });
+
+    // Vérifier si le serveur renvoie une erreur spécifique pour un conflit
+    if (response.status === 409) {
+      throw new Error("❌ Le pseudonyme est déjà pris. Veuillez choisir un autre pseudonyme.");
+    }
+
+    if (!response.ok) throw new Error(`❌ Erreur HTTP: ${response.status}`);
+
+    const data = await response.json();
+    console.log("✅ Données utilisateur envoyées :", data);
+    return data;
+  } catch (error) {
+    console.error("❌ Erreur lors de l'envoi des données :", error);
+    alert(error.message);  // Afficher l'erreur dans une alerte
+  }
 }
 
-console.log(getID());
-  
-// Appel de la fonction et utilisation de .then() pour gérer le résultat
-newUser().then(id => {
-    console.log('ID utilisateur récupéré:', id);
-    console.log(getID());
-});
+// 📌 Récupère les infos utilisateur à partir du pseudonyme et du mot de passe
+async function getUser() {
+  try {
+    let name = getCookie("name");
+    let mdp = getCookie("mdp");
 
-/*
+    if (!name || !mdp) throw new Error("❌ Pseudonyme ou mot de passe introuvable dans les cookies.");
 
-nv etude
-domaine d'etude
-type d'evaluation
-temps de revision
-pseudo et mdp
+    let pseudoKey = name.replace(/\s+/g, "_");
 
-*/
+    const response = await fetch(`${URL}${pseudoKey}/${encodeURIComponent(mdp)}`, {
+      method: "GET",
+    });
+
+    if (!response.ok) throw new Error(`❌ Erreur HTTP: ${response.status}`);
+
+    const data = await response.json();
+    console.log("✅ Données utilisateur récupérées :", data);
+    return data;
+  } catch (error) {
+    console.error("❌ Erreur lors de la récupération des données :", error);
+  }
+}
+
+/* ==========================
+  TEST
+========================== */
+
+// 📌 Test : Crée des données, les envoie, puis tente de les récupérer
+async function testUser() {
+  console.log("🚀 Test en cours...");
+
+  clearCookies();
+
+  // Génération de données factices
+  const testData = {
+    name: "kevin", // Génère un pseudo unique
+    mdp: "mot_de_passe",
+    nv_etude: "Master",
+    type_etude: "Informatique",
+    type_eval: "Projet",
+    work_time: "20h/semaine",
+  };
+
+  // Enregistrement des données dans les cookies
+  for (let key in testData) {
+    setCookie(key, testData[key]);
+  }
+
+  console.log("📌 Données de test enregistrées dans les cookies :", getProfilInfo());
+
+  await newUser(); // Envoie les données utilisateur
+
+  setTimeout(async () => {
+    await getUser(); // Récupère les données utilisateur
+  }, 1000); // Attente de 1 seconde pour laisser le temps au serveur d'enregistrer
+}
+
+/* ==========================
+  BOUTONS DE TEST
+========================== */
+
+// Bouton "Test" (crée des données, les envoie puis les récupère)
+let btn3 = document.createElement("button");
+btn3.id = "test3";
+btn3.textContent = "Tester";
+document.body.appendChild(btn3);
+btn3.addEventListener("click", testUser);
