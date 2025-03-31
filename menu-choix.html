@@ -27,7 +27,10 @@
 		<h2 id="question">Configurez votre formation :</h2>
 		
 		<div id="formulaire">
-			<form>
+			<form method="post" action="save.php">
+				<div class="form-example">
+   					 <input type="submit" value="Créer le planning" />
+  				</div>
 				<div id="date-f">	
 					<label> Selectionnez la date des examens :<labre>
 					<br>
@@ -38,6 +41,12 @@
   		
   					<input type="checkbox" name="aucune" value="Aucune">
 					  <label for="..."> Aucune </label>
+					  <input type="checkbox" name="math" value="Math">
+					  <label for="..."> Maths </label>
+					  <input type="checkbox" name="anglais" value="Anglais">
+					  <label for="..."> Anglais </label>
+					  <input type="checkbox" name="histoire" value="Histoire">
+					  <label for="..."> Histoire </label>
 					  <!--Ajouter une option par matière séléctionnée dans la page créée par Matthieu-->
   				</div>
   				<div id="mode-f">
@@ -49,9 +58,6 @@
 					  <label for="css">Normal</label>
 					  <input type="radio" id="javascript" name="choix" value="Express">
 					  <label for="javascript">Express</label>
-  				</div>
-  				<div class="form-example">
-   					 <input type="submit" value="Créer le planning" />
   				</div>
 			
 			</form>
