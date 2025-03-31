@@ -28,18 +28,9 @@
 		
 		<div id="formulaire">
 			<form>
-  				<div id="range-f">
-  					<label> Combien de temps pourriez-vous accorder à vos révisions :</label>
-  					
-  					<input id="range" type="range" id="volume" name="volume" min="10" max="60" step="10">  
-  					<p><output id="value"></output></p>  					
-  				</div>
-				<div id="date-f">	
-					<label> Selectionnez la date des examens finaux :<labre>
-					<br>
-					<input type="date" id="html" name="...">
-				</div>
+			
 				<div id="niveau-f">
+					<br>
   					<label> As tu déjà des bases dans ces cours :<label>
   		
   					<input type="radio" name="choix" value="Aucune">
@@ -51,10 +42,23 @@
 					  
 
   				</div>
+		
+  				<div id="range-f">
+  					<label> Combien de temps pourriez-vous accorder à vos révisions :</label>
+  					
+  					<input id="range" type="range" id="volume" name="volume" min="10" max="60" step="10">  
+  					<p><output id="value"></output></p>  					
+  				</div>
+				<div id="date-f">	
+					<label> Selectionnez la date des examens finaux :<labre>
+					<br>
+					<input type="date" id="html" name="...">
+				</div>
 				
+  				
   				<div id="matiere-f">
+					<br>
   					<label> Selectionnez les matières à réviser :</label>
-  		
   					<input type="checkbox" name="aucune" value="Aucune">
 					  <label for="..."> Aucune </label>
 					  <input type="checkbox" name="math" value="Math">
@@ -65,6 +69,8 @@
 					  <label for="..."> Histoire </label>
 					  <!--Ajouter une option par matière séléctionnée dans la page créée par Matthieu-->
   				</div>
+				
+  				
   				
   				<div class="form-example">
    					 <input type="submit" value="Créer le planning" />

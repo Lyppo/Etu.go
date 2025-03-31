@@ -55,13 +55,6 @@
 	
 }
 
-#formulaire div label label {
-	display:grid;
-	grid-template-columns: 10% 80%;
-	
-	
-}
-
 #formulaire {
 	display:grid;
 	padding:2vh;
@@ -73,6 +66,18 @@
 	background-color:#8edde8;
 	width:14vh;
 		
+}
+
+#matiere-f {
+	display:grid;
+	grid-template-columns: 10% 70%;
+	
+}
+
+#niveau-f {
+	display:grid;
+	grid-template-columns: 10% 70%;
+	
 }
 
 /*----------------------------------------------------------------------------------*/
