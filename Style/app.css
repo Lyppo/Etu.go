@@ -119,25 +119,36 @@ header {
 
 #account {
 	display:grid;
-	grid-template-columns: 20% 65% 15%;
+	grid-template-columns: 20% 65% 15% 15%;
 	height:10vh;
 	padding-top:1vh;
 }
 
-#infos-bar img:last-of-type  {
+#infos-bar img {
 	width: 9vh;
 	height:4vh;
 }
 
-#account img:first-of-type {
+#userimg{
 	height: 9vh;
 	width: 9vh;
 }
 
-#account img:last-of-type {
+#messageimg {
 	height: 5vh;
 	padding-top: 25%;
 	width: 5vh;
+}
+
+#deconnection {
+	height: max-content;
+	margin-top: 60%;
+	margin-right: 40%;
+}
+
+#deconnection img {
+	width: 2.5vh;
+	height: auto;
 }
 
 #account div {
@@ -362,4 +373,58 @@ h4 {
 .categories .grid14 p {
     margin: 0;
     font-size: 2vh;
+}
+
+/*-----------------------*/
+/*Annales*/
+
+.annales {
+	background-color: #77cfca;
+	margin: 0;
+	padding: 5vh 0 5vh 0;
+}
+
+.liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 1.25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vh;
+    width: 100%;
+}
+
+.liste li {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; /* Espacement entre l'image et le texte */
+    border-radius: 2vh;
+    background-color: #77cfca;
+    width: 38vh;
+    margin: auto;
+    height: 5vh;
+    border: 0.4vh solid #637879;
+}
+
+.liste img {
+    width: 3vh; 
+    height: 3vh;
+}
+
+.liste p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    color: #637879;
+}
+
+.liste li:hover {
+    background-color: #5fa09c; /* Couleur plus foncée au survol */
+    border-color: #4c6061; /* Assombrit la bordure */
+}
+
+.liste li:hover p {
+    color: #ffffff; /* Change la couleur du texte pour un meilleur contraste */
 }
