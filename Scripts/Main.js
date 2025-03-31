@@ -158,6 +158,11 @@ style.textContent = `
         #batterie {
             left: calc(50vw + 21vh);
         }
+        
+        #footer {
+            transform:translate(-50%, -2.5vh);
+            width:42vh;
+        }
     }
 `;
 
