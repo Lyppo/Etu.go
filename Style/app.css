@@ -47,7 +47,7 @@
 #formulaire div {
 	font-size:2.5vh;
 	margin:1vh;
-	background-color:#77cfca;
+	background :linear-gradient(#77cfca, #8eddd8);
 	border-radius: 3vh;
 	outline: 2px solid #6e9c9a;
 	padding:1vh;
@@ -60,7 +60,7 @@
 #formulaire {
 	display:grid;
 	padding:2vh;
-	background-color:#8edde8;
+	background :linear-gradient(#77cfca, #8eddd8);
 	height:100%;
 }
 
@@ -68,6 +68,11 @@
 	background-color:#8edde8;
 	width:14vh;
 		
+}
+
+input {
+	background-color:#8edde8;
+	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2); 
 }
 
 #matiere-f {
