@@ -33,7 +33,7 @@
 	font-size:3vh;
 	background-color:#8edde8;
 	padding-top:3vh;
-	padding-bottom:1vh;
+	padding-bottom:3vh;
 	margin:0;
 	background-color:#77cfca;
 }
@@ -54,7 +54,7 @@
 #formulaire {
 	display:grid;
 	padding:2vh;
-	background-color:#77cfca;
+	background-color:#8edde8;
 	height:100%;
 }
 
