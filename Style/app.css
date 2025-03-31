@@ -12,7 +12,7 @@
 
 #planning table tr th {
 	font-size:1vh;
-	padding:0.5vh;
+	padding:0.5em;
 	background-color:#8eddd8;
 }
 
@@ -25,7 +25,7 @@
 }
 
 #formulaire label {
-	font-size:3vh;
+	font-size:2vh;
 	padding:1vh;
 }
 
@@ -50,10 +50,6 @@
 	
 }
 
-#formulaire div label label label{
-	justify-self:left;
-	
-}
 
 #formulaire {
 	display:grid;
@@ -70,13 +66,13 @@
 
 #matiere-f {
 	display:grid;
-	grid-template-columns: 10% 70%;
+	grid-template-columns:  10% 80% 10%;
 	
 }
 
 #niveau-f {
 	display:grid;
-	grid-template-columns: 10% 70%;
+	grid-template-columns: 10% 80% 10%;
 	
 }
 
