@@ -1,5 +1,3 @@
-
-
 function obtenirMatieres() {
     /*renvoi une liste (array) avec comme valeurs les matieres en fonction de si l'utilisateur a coché dans le formulaire de la page menu-choix.html*/
     let matieres = ["Anglais","Histoire"];
@@ -56,7 +54,7 @@ if (matieres.length != 0) {
 		tr.appendChild(th);
 		for (let j = 1; j < 7; j++) {
 			const th = document.createElement('th');
-			const alea = Math.floor( Math.random() * 2 );
+			const alea = Math.floor( Math.random() * 6 );
 			if (alea == 0) {
 				const mat = Math.floor( Math.random() * matieres.length);
 				th.textContent = matieres[mat];

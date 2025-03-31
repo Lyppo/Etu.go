@@ -28,28 +28,32 @@
 		
 		<div id="formulaire">
 			<form>
-				<div class="form-example">
-   					 <input type="submit" value="Créer le planning" />
+  				<div id="range-f">
+  					<label> Combien de temps pourriez-vous accorder à vos révisions :</label>
+  					
+  					<input id="range" type="range" id="volume" name="volume" min="10" max="60" step="10">  
+  					<p><output id="value"></output></p>  					
   				</div>
 				<div id="date-f">	
-					<label> Selectionnez la date des examens :<labre>
+					<label> Selectionnez la date des examens finaux :<labre>
 					<br>
 					<input type="date" id="html" name="...">
 				</div>
 				<div id="niveau-f">
   					<label> As tu déjà des bases dans ces cours :<label>
   		
-  					<input type="radio" name="aucune" value="Aucune">
+  					<input type="radio" name="choix" value="Aucune">
 					  <label for="..."> Aucune </label>
-					  <input type="radio" name="intermediaire" value="intermediaire">
+					  <input type="radio" name="choix" value="intermediaire">
 					  <label for="..."> J'ai des connaisances mais elles sont insuffisantes </label>
-					  <input type="radio" name="expert" value="expert">
+					  <input type="radio" name="choix" value="expert">
 					  <label for="..."> Je suis un expert </label>
+					  
 
   				</div>
 				
   				<div id="matiere-f">
-  					<label> Selectionnez les matières à réviser :<label>
+  					<label> Selectionnez les matières à réviser :</label>
   		
   					<input type="checkbox" name="aucune" value="Aucune">
 					  <label for="..."> Aucune </label>
@@ -61,16 +65,14 @@
 					  <label for="..."> Histoire </label>
 					  <!--Ajouter une option par matière séléctionnée dans la page créée par Matthieu-->
   				</div>
-  				<div id="mode-f">
-  					<label> Selectionnez le mode d'apprentissage :<label>
-  			
-  					<input type="radio" id="html" name="choix" value="Chill">
-					  <label for="html">Chill</label>
-					  <input type="radio" id="css" name="choix" value="Normal">
-					  <label for="css">Normal</label>
-					  <input type="radio" id="javascript" name="choix" value="Express">
-					  <label for="javascript">Express</label>
+  				
+  				<div class="form-example">
+   					 <input type="submit" value="Créer le planning" />
   				</div>
+  				
+  			
+  		
+  				
 			
 			</form>
 		</div>
@@ -95,5 +97,6 @@
 		</footer></div>
 	</main>
     <script src="Scripts/Main.js"></script>
+    <script src="Scripts/Range.js"></script>
 </body>
 </html>
