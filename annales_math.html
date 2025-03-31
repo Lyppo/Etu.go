@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etu.go</title>
+    <link rel="stylesheet" href="Style/app.css">
+    <link rel="stylesheet" href="Style/tel.css">
+</head>
+<body>
+    <main>
+        <!-- Titre bien positionné en haut -->
+        <h1 class="titre_annales">Mes annales de math</h1>
+
+        <div class="page_annales">
+            <div class="page_annale" onclick="afficherImage('Images/annale_math.jpeg')">
+                <img src="Images/annale_math.jpeg" alt="Annale 1">
+            </div>
+            <div class="page_annale" onclick="afficherImage('Images/annale_math.jpeg')">
+                <img src="Images/annale_math.jpeg" alt="Annale 2">
+            </div>
+            <div class="page_annale" onclick="afficherImage('Images/annale_math.jpeg')">
+                <img src="Images/annale_math.jpeg" alt="Annale 3">
+            </div>
+            <div class="page_annale" onclick="afficherImage('Images/annale_math.jpeg')">
+                <img src="Images/annale_math.jpeg" alt="Annale 4">
+            </div>
+            <div class="page_annale" onclick="afficherImage('Images/annale_math.jpeg')">
+                <img src="Images/annale_math.jpeg" alt="Annale 5">
+            </div>
+            <div class="page_annale" onclick="afficherImage('Images/annale_math.jpeg')">
+                <img src="Images/annale_math.jpeg" alt="Annale 6">
+            </div>
+        </div>
+
+        <!-- Fenêtre modale pour afficher l'image en grand -->
+        <div id="modal" class="modal">
+            <span class="close" onclick="fermerImage()">&times;</span>
+            <img class="modal-content" id="imageGrande">
+        </div>
+
+        <div id="centre">
+            <footer id="footer">
+                <div><a href="accueil.html">
+                    <img src="Images/maison.png">
+                    <p>Accueil</p>
+                </a></div>
+                <div><a href="">
+                    <img src="Images/boussole.png">
+                    <p>Annales</p>
+                </a></div>
+                <div><a href="">
+                    <img src="Images/planning.png">
+                    <p>Planning</p>
+                </a></div>
+                <div><a href="">
+                    <img src="Images/communaute.png">
+                    <p>Ami(e)s</p>
+                </a></div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="Scripts/Main.js"></script>
+    <script>
+        function afficherImage(src) {
+            const modal = document.getElementById("modal");
+            const imageGrande = document.getElementById("imageGrande");
+
+            modal.style.display = "flex";
+            imageGrande.src = src;
+
+            // Fermer l'image en cliquant sur l'arrière-plan
+            modal.onclick = function (event) {
+                if (event.target === modal) {
+                    fermerImage();
+                }
+            };
+        }
+
+        function fermerImage() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        // S'assurer que la fonction ne s'exécute pas au chargement
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("modal").style.display = "none";
+        });
+    </script>
+</body>
+</html>
