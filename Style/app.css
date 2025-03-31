@@ -22,6 +22,12 @@
 
 #question, #formulaire label {
 	font-family: "Arial";
+	
+	
+}
+
+#formulaire form div {
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); 
 }
 
 #formulaire label {
@@ -31,7 +37,7 @@
 
 #question {
 	font-size:3vh;
-	background-color:#8edde8;
+	
 	padding-top:3vh;
 	padding-bottom:3vh;
 	margin:0;
@@ -196,6 +202,7 @@ header {
 	padding-top:1vh;
 	padding-bottom:1vh;
 	outline: 0.5px solid #6e9c9a;
+	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -222,7 +229,7 @@ footer {
   	bottom:0;
   	height:8vh;
   	transform: translate(-50%, 0); /* décalage de 50% de sa propre taille */
-   	
+   	box-shadow: 10px 5px 5px  rgba(0, 0, 0, 0.2); 
    	
 }
 
