@@ -78,7 +78,7 @@ a {
     font-weight: bold;
 }
 
-#continuer {
+.continuer {
     border-radius: 2vh;
     background-color: #007aff;
     width: 38vh;
@@ -94,19 +94,19 @@ a {
     box-shadow: 0 0 7px #000;
 }
 
-#continuer p {
+.continuer p {
     margin: 1vh;
     color: white;
     font-size: 2vh;
     font-weight: bold;
 }
 
-#continuer:hover {
+.continuer:hover {
     background-color: #005bbf; /* Couleur plus foncée au survol */
     cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
 }
 
-#continuer:hover p {
+.continuer:hover p {
     color: #e0e0e0; /* Légèrement plus clair pour un meilleur contraste */
 }
 

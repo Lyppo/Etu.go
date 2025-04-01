@@ -369,6 +369,12 @@ h4 {
     font-weight: bold;
 }
 
+.voir {
+    text-decoration: none;
+    color: white;
+    margin-top: 2.5vh;
+}
+
 /*----------------------------------*/
 
 /*Catégories*/
@@ -397,7 +403,7 @@ h4 {
 /*-----------------------*/
 /*Annales*/
 
-.annales {
+.annales, .cours {
 	background-color: #77cfca;
 	margin: 0;
 	padding-top: 5vh;
@@ -465,7 +471,7 @@ h4 {
 }
 
 /* Titre en haut */
-.titre_annales {
+.titre {
     text-align: center;
     font-size: 3vh;
     font-weight: bold;
