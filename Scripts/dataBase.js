@@ -140,8 +140,8 @@ async function testUser() {
 ========================== */
 
 // Bouton "Test" (crée des données, les envoie puis les récupère)
-let btn3 = document.createElement("button");
+/*let btn3 = document.createElement("button");
 btn3.id = "test3";
 btn3.textContent = "Tester";
 document.body.appendChild(btn3);
-btn3.addEventListener("click", testUser);
+btn3.addEventListener("click", testUser);*/
