@@ -149,8 +149,8 @@ header {
 
 #deconnection {
 	height: max-content;
-	margin-top: 60%;
-	margin-right: 40%;
+	margin-top: 3vh;
+	margin-right: 2.2vh;
 }
 
 #deconnection img {
@@ -234,7 +234,7 @@ footer {
   	bottom:0;
   	height:8vh;
   	transform: translate(-50%, 0); /* décalage de 50% de sa propre taille */
-   	box-shadow: 10px 5px 5px  rgba(0, 0, 0, 0.2); 
+	box-shadow: 0 0 7px #000;
    	
 }
 

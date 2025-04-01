@@ -23,6 +23,7 @@ a {
     width: 30vh;
     height: 7vh;
     margin: auto;
+    box-shadow: 0 0 10px #000;
 }
 
 .cestparti p {
@@ -53,7 +54,7 @@ a {
 /*---------------------------------------------*/
 /*2eme page*/
 
-#logo {
+.lancement_2 #logo {
     margin-top: 5vh;
     max-width: 17vh;
 }
@@ -90,6 +91,7 @@ a {
     left: 50%;
     transform: translateX(-50%); 
     bottom: 7vh;
+    box-shadow: 0 0 7px #000;
 }
 
 #continuer p {
