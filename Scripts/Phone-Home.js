@@ -1,7 +1,3 @@
-document.getElementById("launch-app").addEventListener("click", function() {
-    window.location.href = "lancement.html";
-});
-
 function obtenirHeure() {
     const date = new Date();
     let heures = date.getHours();

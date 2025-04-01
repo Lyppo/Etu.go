@@ -37,7 +37,7 @@ const batterie = document.createElement('img');
 batterie.id = 'batterie';
 batterie.src = 'Images/batterie.png';
 
-const bar = document.querySelector('main');
+const bar = document.querySelector('body');
 bar.prepend(camera, geste, wifi, heure, reseau, notif, batterie);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -328,8 +328,28 @@ function requestFullscreen() {
     }
 }
 
+let nv_etu = document.querySelector(".liste li");
+
+for (let i = 0; i < nv_etu.length; i++) {
+    console.log(nv_etu[i]);
+    /*nv_etu[i].addEventListener('click', function (event) {
+        if (event.target.style.backgroundColor === "#77cfca") {
+            event.target.textContent = `test`;
+        }
+        else {
+            event.target.textContent = event.target.style.backgroundColor;
+        }
+    });*/
+}
+
 // Écoute les événements d'interaction de l'utilisateur
 document.addEventListener('click', requestFullscreen);
 document.addEventListener('keydown', requestFullscreen);
 document.addEventListener('touchstart', requestFullscreen);
 document.addEventListener('mousedown', requestFullscreen);
+
+document.getElementById('sing-in').addEventListener('click', function (event) {
+    event.preventDefault();
+    clearCookies();
+    window.location.href = "niveau_etudes.html";
+});

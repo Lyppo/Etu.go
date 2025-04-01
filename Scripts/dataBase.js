@@ -113,7 +113,7 @@ async function testUser() {
 
   // Génération de données factices
   const testData = {
-    name: "kevin", // Génère un pseudo unique
+    name: "test " + Math.floor(Math.random() * 1000), // Génère un pseudo unique
     mdp: "mot_de_passe",
     nv_etude: "Master",
     type_etude: "Informatique",
@@ -140,8 +140,8 @@ async function testUser() {
 ========================== */
 
 // Bouton "Test" (crée des données, les envoie puis les récupère)
-/*let btn3 = document.createElement("button");
-btn3.id = "test3";
-btn3.textContent = "Tester";
-document.body.appendChild(btn3);
-btn3.addEventListener("click", testUser);*/
+let btn = document.createElement("button");
+btn.id = "test";
+btn.textContent = "Tester";
+document.body.appendChild(btn);
+btn.addEventListener("click", testUser);
