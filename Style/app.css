@@ -26,13 +26,20 @@
 	
 }
 
+#formulaire span {
+	text-align:left;
+}
+
 #formulaire form div {
 	box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); 
 }
 
 #formulaire label {
 	font-size:2vh;
+	text-align:left;;
 	padding:1vh;
+	
+
 }
 
 #question {
@@ -73,6 +80,7 @@
 input {
 	background-color:#8edde8;
 	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2); 
+	
 }
 
 #matiere-f {
