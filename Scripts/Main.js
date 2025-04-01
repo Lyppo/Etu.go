@@ -40,6 +40,138 @@ batterie.src = 'Images/batterie.png';
 const bar = document.querySelector('main');
 bar.prepend(camera, geste, wifi, heure, reseau, notif, batterie);
 
+document.addEventListener('DOMContentLoaded', function () {
+    const notifIcon = document.getElementById('notif');
+
+    if (!notifIcon) {
+        console.error("❌ Erreur : L'icône de notification n'existe pas !");
+        return;
+    }
+
+    // Création du panneau de notifications
+    const notifPanel = document.createElement('div');
+    notifPanel.id = 'notifPanel';
+    Object.assign(notifPanel.style, {
+        position: 'absolute',
+        height: '91%',
+        width: '43.5vh',
+        backgroundColor: 'rgba(50, 50, 50, 0.95)',
+        borderRadius: '2vh',
+        padding: '2vh',
+        color: 'white',
+        display: 'none', // Caché par défaut
+        zIndex: '200',
+        textAlign: 'center',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'center'
+    });
+
+    // Ajout d'une croix pour fermer
+    const closeNotif = document.createElement('span');
+    closeNotif.textContent = "✖";
+    Object.assign(closeNotif.style, {
+        position: 'absolute',
+        top: '1.5vh',
+        right: '2vh',
+        cursor: 'pointer',
+        fontSize: '2vh',
+        color: 'white'
+    });
+
+    closeNotif.addEventListener('click', function () {
+        notifPanel.style.display = 'none';
+    });
+
+    // Conteneur des notifications
+    const notifContainer = document.createElement('div');
+    notifContainer.id = 'notifContainer';
+    Object.assign(notifContainer.style, {
+        width: '100%',
+        overflowY: 'auto',
+        maxHeight: '80%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: '3vh'
+    });
+
+    // Message par défaut
+    const notifText = document.createElement('p');
+    notifText.id = "notifText";
+    notifText.textContent = "Aucune notification";
+    notifText.style.fontSize = '2vh';
+    notifText.style.marginTop = '4vh';
+
+    notifPanel.appendChild(closeNotif);
+    notifPanel.appendChild(notifText);
+    notifPanel.appendChild(notifContainer);
+
+    // Ajout du panneau dans "main" (assurez-vous que "bar" existe)
+    const bar = document.querySelector('main');
+    if (bar) {
+        bar.prepend(notifPanel);
+    } else {
+        console.error("❌ Erreur : Élément 'main' introuvable !");
+    }
+
+    // Toggle d'affichage du panneau au clic sur l’icône de notification
+    notifIcon.addEventListener('click', function (event) {
+        event.stopPropagation();
+        notifPanel.style.display = (notifPanel.style.display === 'none' ? 'flex' : 'none');
+    });
+
+    // Cacher le panneau si on clique ailleurs
+    document.addEventListener('click', function (event) {
+        if (event.target !== notifIcon && event.target !== notifPanel && !notifPanel.contains(event.target)) {
+            notifPanel.style.display = 'none';
+        }
+    });
+
+});
+
+// Fonction pour ajouter une notification
+function ajouterNotification(message) {
+    const notifContainer = document.getElementById('notifContainer');
+    const notifText = document.getElementById('notifText');
+
+    if (!notifContainer) {
+        console.error("❌ Erreur : notifContainer introuvable !");
+        return;
+    }
+
+    // Supprime le message "Aucune notification" s'il existe
+    if (notifText) {
+        notifText.remove();
+    }
+
+    // Création d'un nouvel élément pour la notification
+    const nouvelleNotif = document.createElement('div');
+    nouvelleNotif.classList.add('notification');
+    nouvelleNotif.textContent = message;
+    Object.assign(nouvelleNotif.style, {
+        backgroundColor: '#444',
+        padding: '1vh',
+        margin: '1vh 0',
+        borderRadius: '1vh',
+        width: '90%',
+        textAlign: 'left',
+        color: 'white'
+    });
+
+    // Ajoute la notification en haut
+    notifContainer.prepend(nouvelleNotif);
+}
+
+// Attendre que le DOM soit prêt avant d'ajouter des notifications
+window.onload = function () {
+    ajouterNotification("🔔 Nouveau message reçu !");
+    ajouterNotification("📑 Etu.go : il est l'heure de réviser !");
+    ajouterNotification("✅ Téléchargement terminé !");
+};
+
+
+
 
 const style = document.createElement('style');
 style.textContent = `
@@ -201,4 +333,3 @@ document.addEventListener('click', requestFullscreen);
 document.addEventListener('keydown', requestFullscreen);
 document.addEventListener('touchstart', requestFullscreen);
 document.addEventListener('mousedown', requestFullscreen);
-
