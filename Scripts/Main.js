@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Object.assign(notifPanel.style, {
         position: 'absolute',
         height: '91%',
-        width: '43.5vh',
+        width: '43.7vh',
         backgroundColor: 'rgba(50, 50, 50, 0.95)',
         borderRadius: '2vh',
         padding: '2vh',
