@@ -328,28 +328,85 @@ function requestFullscreen() {
     }
 }
 
-let nv_etu = document.querySelector(".liste li");
-
-for (let i = 0; i < nv_etu.length; i++) {
-    console.log(nv_etu[i]);
-    /*nv_etu[i].addEventListener('click', function (event) {
-        if (event.target.style.backgroundColor === "#77cfca") {
-            event.target.textContent = `test`;
-        }
-        else {
-            event.target.textContent = event.target.style.backgroundColor;
-        }
-    });*/
-}
-
 // Écoute les événements d'interaction de l'utilisateur
 document.addEventListener('click', requestFullscreen);
 document.addEventListener('keydown', requestFullscreen);
 document.addEventListener('touchstart', requestFullscreen);
 document.addEventListener('mousedown', requestFullscreen);
 
-document.getElementById('sing-in').addEventListener('click', function (event) {
-    event.preventDefault();
-    clearCookies();
-    window.location.href = "niveau_etudes.html";
-});
+function saveNvEtude(type = null) {
+    if (type == null) {
+        if (getCookie("nv_etude") != null) {
+            document.getElementById(getCookie("nv_etude")).style.backgroundColor = "#6490b2";
+        }
+        return getCookie("nv_etude");
+    }
+    else {
+        if (getCookie("nv_etude") != null) {
+            document.getElementById(getCookie("nv_etude")).style.backgroundColor = "#77cfca";
+        }
+        setCookie("nv_etude", type.nv_etude);
+        document.getElementById(type.nv_etude).style.backgroundColor = "#6490b2";
+
+    }
+}
+
+function saveTypeEtude(type = null) {
+    if (type == null) {
+        if (getCookie("type_etude") != null) {
+            document.getElementById(getCookie("type_etude")).style.backgroundColor = "#6490b2";
+        }
+        return getCookie("type_etude");
+    }
+    else {
+        if (getCookie("type_etude") != null) {
+            document.getElementById(getCookie("type_etude")).style.backgroundColor = "#77cfca";
+        }
+        setCookie("type_etude", type.type_etude);
+        document.getElementById(type.type_etude).style.backgroundColor = "#6490b2";
+
+    }
+}
+
+function saveTypeEval(type = null) {
+    if (type == null) {
+        if (getCookie("type_eval") != null) {
+            document.getElementById(getCookie("type_eval")).style.backgroundColor = "#6490b2";
+        }
+        return getCookie("type_eval");
+    }
+    else {
+        if (getCookie("type_eval") != null) {
+            document.getElementById(getCookie("type_eval")).style.backgroundColor = "#77cfca";
+        }
+        setCookie("type_eval", type.evaluation);
+        document.getElementById(type.evaluation).style.backgroundColor = "#6490b2";
+
+    }
+}
+
+function saveTempsRev(type = null) {
+    if (type == null) {
+        if (getCookie("work_time") != null) {
+            document.getElementById(getCookie("work_time")).style.backgroundColor = "#6490b2";
+        }
+        return getCookie("work_time");
+    }
+    else {
+        if (getCookie("work_time") != null) {
+            document.getElementById(getCookie("work_time")).style.backgroundColor = "#77cfca";
+        }
+        setCookie("work_time", type.temps_revision);
+        document.getElementById(type.temps_revision).style.backgroundColor = "#6490b2";
+
+    }
+}
+
+function login(name = null, mdp = null) {
+    if (name && mdp && name.trim().length > 0 && mdp.trim().length > 0) {
+        setCookie("name", name);
+        setCookie("mdp", mdp);
+        return true;
+    }
+    return false;
+}

@@ -63,7 +63,8 @@ async function newUser() {
 
     // Vérifier si le serveur renvoie une erreur spécifique pour un conflit
     if (response.status === 409) {
-      throw new Error("❌ Le pseudonyme est déjà pris. Veuillez choisir un autre pseudonyme.");
+      console.log("❌ Le pseudonyme est déjà pris. Veuillez choisir un autre pseudonyme.");
+      return 409;
     }
 
     if (!response.ok) throw new Error(`❌ Erreur HTTP: ${response.status}`);
@@ -100,48 +101,3 @@ async function getUser() {
     console.error("❌ Erreur lors de la récupération des données :", error);
   }
 }
-
-/* ==========================
-  TEST
-========================== */
-
-// 📌 Test : Crée des données, les envoie, puis tente de les récupérer
-async function testUser() {
-  console.log("🚀 Test en cours...");
-
-  clearCookies();
-
-  // Génération de données factices
-  const testData = {
-    name: "test " + Math.floor(Math.random() * 1000), // Génère un pseudo unique
-    mdp: "mot_de_passe",
-    nv_etude: "Master",
-    type_etude: "Informatique",
-    type_eval: "Projet",
-    work_time: "20h/semaine",
-  };
-
-  // Enregistrement des données dans les cookies
-  for (let key in testData) {
-    setCookie(key, testData[key]);
-  }
-
-  console.log("📌 Données de test enregistrées dans les cookies :", getProfilInfo());
-
-  await newUser(); // Envoie les données utilisateur
-
-  setTimeout(async () => {
-    await getUser(); // Récupère les données utilisateur
-  }, 1000); // Attente de 1 seconde pour laisser le temps au serveur d'enregistrer
-}
-
-/* ==========================
-  BOUTONS DE TEST
-========================== */
-
-// Bouton "Test" (crée des données, les envoie puis les récupère)
-let btn = document.createElement("button");
-btn.id = "test";
-btn.textContent = "Tester";
-document.body.appendChild(btn);
-btn.addEventListener("click", testUser);
